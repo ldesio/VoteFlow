@@ -1,19 +1,14 @@
 
 # Title
-**voteflow** — Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Corbetta and Schadee (1984)
+**voteflow** — Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Schadee and Corbetta (1984)
 
 # Installation
 ```
 // install mat2txt, used for outputting matrices
 ssc install mat2txt                                           
 
-// install "github", allowing to directly install VoteFlow from GitHub
-net install github, from("https://haghish.github.io/github/")
+net install voteflow, from("https://raw.githubusercontent.com/ldesio/VoteFlow/refs/heads/main/src/stata/") replace
 
-// install VoteFlow
-github install ldesio/VoteFlow
-
-voteflow varlist, indeps(varlist) [verbose] [save(string)] [filter(string)]
 ```
 
 
@@ -35,7 +30,7 @@ It estimates a vote flow matrix by:
 2. Correcting unacceptable coefficients.
 3. Redistributing the corrections through the iterative proportional fitting RAS algorithm.
 
-This three-step procedure was first presented by Mannheimer and Micheli (1976) and later structured and systematized by Corbetta and Schadee (1984).
+This three-step procedure was first presented by Mannheimer and Micheli (1976) and later structured and systematized by Schadee and Corbetta (1984).
 
 It requires:
 - `varlist`: The list of dependent variables (votes cast to each possible vote choice, typically including abstention, at t1).
@@ -67,7 +62,7 @@ Additionally, it provides options to:
 # Remarks
 The application of Goodman ecological regression requires relatively strong assumptions:
 - **Constancy of vote flow parameters** across precincts is assumed, with random variations uncorrelated to unobserved variables.
-- Recommendations from Corbetta and Schadee (1984):
+- Recommendations from Schadee and Corbetta (1984):
   - Analyze areas that are relatively **homogeneous** in terms of sociodemographic composition. Avoid over-aggregation but ensure sufficient polling stations per coefficient (e.g., an 8x8 matrix requires at least 128 polling stations).
   - Exclude **special polling stations** (e.g., hospitals) or those with unusual voter counts or large changes in voter numbers between elections.
   - Avoid **ecological fallacy** by analyzing data at the smallest possible level, such as polling stations.
@@ -77,8 +72,8 @@ The application of Goodman ecological regression requires relatively strong assu
 
 # Citation
 We kindly ask users to acknowledge the use of this package through the following citations:
-- Corbetta, Pier Giorgio, and Henri M. A. Schadee. 1984. *Metodi e modelli di analisi dei dati elettorali.* Bologna: Il Mulino.
-- De Sio, Lorenzo, Corbetta, Pier Giorgio, and Henri M. A. Schadee. 2024. *VOTEFLOW: Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Corbetta and Schadee (1984).* Statistical Software Components SXXXXXX, Boston College Department of Economics. Revised 2024. [Link](https://ideas.repec.org/c/boc/bocode/sXXXX.html)
+- Schadee, Henri M. A. and Pier Giorgio Corbetta. 1984. *Metodi e modelli di analisi dei dati elettorali.* Bologna: Il Mulino.
+- De Sio, Lorenzo, Corbetta, Pier Giorgio, and Henri M. A. Schadee. 2024. *VOTEFLOW: Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Corbetta and Schadee (1984). [Link](https://github.com/ldesio/VoteFlow/)
 
 ---
 
