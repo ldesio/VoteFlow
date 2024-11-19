@@ -2,6 +2,22 @@
 # Title
 **voteflow** — Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Corbetta and Schadee (1984)
 
+# Installation
+```
+// install mat2txt, used for outputting matrices
+ssc install mat2txt                                           
+
+// install "github", allowing to directly install VoteFlow from GitHub
+net install github, from("https://haghish.github.io/github/")
+
+// install VoteFlow
+github install ldesio/VoteFlow
+
+voteflow varlist, indeps(varlist) [verbose] [save(string)] [filter(string)]
+```
+
+
+
 ---
 
 # Syntax
