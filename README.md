@@ -48,8 +48,8 @@ Additionally, it provides options to:
 - `indeps(varlist)`  
   Specifies the list of independent variables (votes cast to each possible vote choice, typically including abstention, at t0).
 
-- `verbose`  
-  Outputs additional details.
+- `nooutput`  
+  Suppresses screen matrix output.
 
 - `save(string)`  
   Saves the estimated matrices to an external (Excel-readable) tab-delimited text file specified by `string`.
