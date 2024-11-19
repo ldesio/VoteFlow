@@ -17,7 +17,7 @@ net install voteflow, from("https://raw.githubusercontent.com/ldesio/VoteFlow/re
 
 # Syntax
 ```
-voteflow varlist, indeps(varlist) [verbose] [save(string)] [filter(string)]
+voteflow varlist, indeps(varlist) [nooutput] [save(string)] [filter(string)]
 ```
 
 ---
