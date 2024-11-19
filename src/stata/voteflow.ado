@@ -1,6 +1,9 @@
 capture program drop cite_voteflow
 program define cite_voteflow
 	di `"[Done with {browse "https://github.com/ldesio/VoteFlow":github.com/ldesio/VoteFlow} (Corbetta, De Sio and Schadee 2024)]"'
+	di "Please cite:"
+	di "- Corbetta, Pier Giorgio, and Henri M. A Schadee. 1984. Metodi e modelli di analisi dei dati elettorali. Bologna: Il Mulino."
+	di `"- De Sio, Lorenzo, Corbetta, Pier Giorgio and Henri M.A. Schadee, 2024. "VOTEFLOW: Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Corbetta and Schadee (1984)", https://github.com/ldesio/VoteFlow"'
 end
 capture program drop voteflow
 program define voteflow, rclass
@@ -99,7 +102,7 @@ program define voteflow, rclass
 			di "OK."
 		}
 	
-		qui count if `touse' `thefilter' & (`variation'>=0.15)
+		qui count if `touse' `thefilter' & (`variation'>=0.15 | `variation'==.)
 		di _column(5) "- `r(N)' units changed in size by more than 15%... " _
 		
 		if (`r(N)'>0) {
@@ -111,7 +114,7 @@ program define voteflow, rclass
 			else {
 				di ""
 				di _column(5) "  automatically excluding them, as 'autoexclude' option was specified."
-				local newfilter = "`newfilter' & `variation' < 0.15"
+				local newfilter = "`newfilter' & (`variation' < 0.15 | `variation'==.)"
 			}
 		} 
 		else {
@@ -172,6 +175,7 @@ program define voteflow, rclass
 			di _column(5) "`v' " _
 			qui regress `v' `indeps' if `touse' `thefilter', nocons
 			local rsq `rsq' `e(r2)'
+			di "(R2=" %3.2f e(r2) ") " _
 			
 			local i = `i' + 1
 			if(`i'==1) {

@@ -97,7 +97,7 @@ voteflow y1 y2, indeps(x1 x2) filter("voters_t1 > 200")
 ---
 
 # References
-- Corbetta, Pier Giorgio, and Henri M. A. Schadee. 1984. *Metodi e modelli di analisi dei dati elettorali.* Bologna: Il Mulino.
+- Schadee, Henri M. A. and Pier Giorgio Corbetta. 1984. *Metodi e modelli di analisi dei dati elettorali.* Bologna: Il Mulino.
 - Goodman, L. A. 1953. “Ecological regressions and behavior of individuals.” *American Sociological Review,* 18(6): 663–64.
 - Goodman, L. A. 1959. “Some alternatives to ecological correlation.” *American Journal of Sociology,* 64(6): 610–25.
 - Micheli, Giuseppe. 1976. “Il comportamento individuale nell’analisi sociologica del dato aggregato.” *Il giornale degli economisti ed annali di economia,* XXV: 429–48.

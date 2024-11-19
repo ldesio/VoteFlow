@@ -7,7 +7,7 @@
     {p_end}
 
 {title:Syntax}
-    {cmd:voteflow} {it:varlist} {cmd:,} {cmd:indeps(}{it:varlist}{cmd:)} [{cmd:verbose}] [{cmd:save(}{it:string}{cmd:)}] [{cmd:filter(}{it:string}{cmd:)}]
+    {cmd:voteflow} {it:varlist} {cmd:,} {cmd:indeps(}{it:varlist}{cmd:)} [{cmd:nooutput}] [{cmd:save(}{it:string}{cmd:)}] [{cmd:filter(}{it:string}{cmd:)}]
 
 {title:Description}
     {pstd} The {cmd:voteflow} command performs vote-flow estimation on ecological electoral-results data (ideally at the polling-station level).
@@ -23,7 +23,7 @@
     {cmd:indeps(}{it:varlist}{cmd:)} specifies the list of independent variables (votes cast to each possible vote choice - typically including abstention - at t0).
     {p_end}
     {pstd}
-    {cmd:verbose} outputs additional details.
+    {cmd:nooutput} suppresses screen matrix output.
     {p_end}
     {pstd}
     {cmd:save(}{it:string}{cmd:)} saves the estimated matrices to an external (Excel-readable) tab-delimited text file specified by {it:string}.
