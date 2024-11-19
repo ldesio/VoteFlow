@@ -1,0 +1,8 @@
+d Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting
+d This package provides the 'voteflow' command for performing vote-flow estimation on ecological electoral-results data (ideally at the polling-station level). It estimates a vote flow matrix by (1) performing Goodman ecological regression; (2) correcting unacceptable coefficients; (3) redistributing the corrections through the iterative proportional fitting RAS algorithm. It implements a three-step procedure first presented by Mannheimer and Micheli (1976) and later structured and systematized by Corbetta and Schadee (1984).
+d (2024) Lorenzo De Sio, Piergiorgio Corbetta, Henri M.A. Schadee
+v 1.0.0 24oct2024
+
+f voteflow.ado
+f voteflow.sthlp
+
