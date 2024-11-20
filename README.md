@@ -2,6 +2,8 @@
 # Title
 **voteflow** — Vote flow estimation through Goodman ecological regression and coefficient adjustment via RAS iterative proportional fitting, as systematized by Schadee and Corbetta (1984)
 
+Available as a Stata package (see installation instructions below) or for R. An R script is already available (see `src/R`) and a proper R package will be available soon. 
+
 # Installation
 ```
 // install mat2txt, used for outputting matrices
